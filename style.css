@@ -8,32 +8,35 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     background: #ffffff;
-
     color: #111111;
-
     line-height: 1.6;
 }
 
-
 img {
     max-width: 100%;
+    display: block;
 }
-
 
 a {
     color: inherit;
 }
 
+
+/* =========================================
+   GLOBAL CONTAINER
+========================================= */
+
+.container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+}
 
 
 /* =========================================
@@ -42,181 +45,151 @@ a {
 
 header {
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 100;
 }
 
-
-nav {
-    max-width: 1300px;
-
+.site-nav {
+    width: min(1180px, calc(100% - 80px));
     margin: 0 auto;
 
-    padding: 22px 35px;
+    padding: 24px 0;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 40px;
 }
-
 
 .logo-link {
-    display: flex;
-
-    align-items: center;
+    display: block;
+    flex-shrink: 0;
 }
 
-
-nav img {
-    width: 140px;
-
+.logo-link img {
+    width: 170px;
     height: auto;
 }
 
-
 .nav-links {
     display: flex;
-
     align-items: center;
+    gap: 32px;
 
-    gap: 30px;
+    margin-left: auto;
 }
-
 
 .nav-links a {
     color: white;
-
     text-decoration: none;
 
-    font-size: 13px;
-
+    font-size: 12px;
     font-weight: 600;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 
     transition: opacity 0.2s;
 }
 
-
 .nav-links a:hover {
-    opacity: 0.7;
+    opacity: 0.65;
 }
-
 
 .nav-button {
     display: inline-block;
 
-    padding: 12px 20px;
+    padding: 13px 19px;
 
     background: white;
-
     color: #111111;
 
     text-decoration: none;
 
     font-size: 11px;
-
     font-weight: 700;
 
     letter-spacing: 1px;
 
-    transition: 0.2s;
-}
+    white-space: nowrap;
 
+    transition: transform 0.2s;
+}
 
 .nav-button:hover {
     transform: translateY(-2px);
 }
 
 
-
 /* =========================================
-   GENERAL
+   TYPOGRAPHY
 ========================================= */
-
-.section {
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    padding: 120px 40px;
-}
-
 
 .eyebrow {
     font-size: 11px;
-
     font-weight: 700;
 
     letter-spacing: 3px;
 
     text-transform: uppercase;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+}
 
 
 /* =========================================
-   SIMPLE HERO
+   HERO
 ========================================= */
 
-.hero-simple {
-    min-height: 75vh;
+.hero {
+    min-height: 78vh;
 
     display: flex;
-
     align-items: center;
 
     background: #111214;
-
     color: white;
 }
 
-
-.hero-simple-content {
-    width: 100%;
-
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    padding: 160px 40px 100px;
+.hero-content {
+    padding-top: 160px;
+    padding-bottom: 100px;
 }
 
+.hero h1 {
+    font-size: clamp(70px, 10vw, 125px);
 
-.hero-simple h1 {
-    font-size: clamp(60px, 10vw, 120px);
+    line-height: 0.86;
 
-    line-height: 0.88;
+    letter-spacing: -6px;
 
-    letter-spacing: -5px;
-
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 }
-
 
 .hero-description {
-    max-width: 650px;
+    max-width: 620px;
 
-    font-size: 21px;
-
+    font-size: 20px;
     line-height: 1.5;
 
+    color: #d7d7d7;
+
     margin-bottom: 40px;
-
-    color: #dddddd;
 }
-
 
 
 /* =========================================
@@ -226,45 +199,43 @@ nav img {
 .button {
     display: inline-block;
 
-    padding: 16px 28px;
+    padding: 16px 27px;
 
-    background: white;
-
+    background: #ffffff;
     color: #111111;
 
     text-decoration: none;
 
-    font-size: 12px;
-
+    font-size: 11px;
     font-weight: 700;
 
     letter-spacing: 1px;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
-
 
 .button:hover {
     transform: translateY(-3px);
 }
 
 
-
 /* =========================================
-   ABOUT
+   SECTIONS
 ========================================= */
 
-.intro {
-    padding-top: 140px;
-
-    padding-bottom: 140px;
+.section {
+    padding: 130px 0;
 }
 
 
-.intro-content {
+/* =========================================
+   TWO COLUMN
+========================================= */
+
+.two-column {
     display: grid;
 
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 100px;
 
@@ -272,66 +243,50 @@ nav img {
 }
 
 
-.intro h2 {
-    font-size: clamp(45px, 6vw, 75px);
+/* =========================================
+   ABOUT
+========================================= */
 
-    line-height: 1;
-
-    letter-spacing: -2px;
+.about {
+    background: #ffffff;
 }
 
-
-.intro-text {
-    max-width: 600px;
+.about h2 {
+    max-width: 560px;
 }
 
+.text-content {
+    max-width: 560px;
+}
 
-.large-text {
+.text-content .lead {
     font-size: 25px;
-
     line-height: 1.45;
 
     margin-bottom: 30px;
 }
 
-
-.intro-text p:not(.large-text) {
+.text-content p:not(.lead) {
     font-size: 17px;
 
-    margin-bottom: 20px;
-
     color: #555555;
-}
 
+    margin-bottom: 20px;
+}
 
 
 /* =========================================
    PHILOSOPHY
 ========================================= */
 
-.dark {
-    max-width: none;
-
-    background: #101214;
-
+.philosophy {
+    background: #111214;
     color: white;
-
-    padding-left: max(40px, calc((100vw - 1170px) / 2));
-
-    padding-right: max(40px, calc((100vw - 1170px) / 2));
 }
-
 
 .philosophy h2 {
-    font-size: clamp(45px, 6vw, 75px);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 80px;
+    margin-bottom: 85px;
 }
-
 
 .philosophy-grid {
     display: grid;
@@ -341,42 +296,37 @@ nav img {
     gap: 30px;
 }
 
-
 .philosophy-item {
     border-top: 1px solid #444444;
 
     padding-top: 25px;
 }
 
-
 .number {
     display: block;
 
+    color: #888888;
+
     font-size: 12px;
 
-    color: #999999;
-
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
-
 
 .philosophy-item h3 {
     font-size: 22px;
 
-    margin-bottom: 20px;
-
     letter-spacing: 1px;
+
+    margin-bottom: 20px;
 }
 
-
 .philosophy-item p {
-    max-width: 350px;
+    max-width: 340px;
 
-    color: #bbbbbb;
+    color: #bdbdbd;
 
     font-size: 16px;
 }
-
 
 
 /* =========================================
@@ -384,22 +334,12 @@ nav img {
 ========================================= */
 
 .training {
-    padding-top: 120px;
-
-    padding-bottom: 120px;
+    background: #ffffff;
 }
-
 
 .training h2 {
-    font-size: clamp(45px, 6vw, 75px);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
-
     margin-bottom: 70px;
 }
-
 
 .cards {
     display: grid;
@@ -409,26 +349,23 @@ nav img {
     gap: 20px;
 }
 
-
 .card {
-    min-height: 300px;
+    min-height: 310px;
 
     padding: 35px;
 
-    background: #f2f2f0;
-
-    border: none;
+    background: #f1f1ef;
 }
 
-
 .card-number {
-    font-size: 12px;
+    display: block;
 
     color: #777777;
 
+    font-size: 12px;
+
     margin-bottom: 70px;
 }
-
 
 .card h3 {
     font-size: 25px;
@@ -438,7 +375,6 @@ nav img {
     margin-bottom: 20px;
 }
 
-
 .card p {
     color: #555555;
 
@@ -446,44 +382,29 @@ nav img {
 }
 
 
-
 /* =========================================
    LOCATION
 ========================================= */
 
 .location {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: center;
+    background: #f5f5f3;
 }
-
 
 .location h2 {
-    font-size: clamp(45px, 6vw, 75px);
-
-    line-height: 1;
-
-    letter-spacing: -2px;
+    max-width: 560px;
 }
 
-
-.location-text {
-    max-width: 550px;
+.location .text-content {
+    padding-top: 45px;
 }
 
-
-.location-text p {
-    font-size: 20px;
-
-    margin-bottom: 25px;
+.location .text-content p {
+    font-size: 19px;
 
     color: #444444;
-}
 
+    margin-bottom: 25px;
+}
 
 
 /* =========================================
@@ -491,15 +412,14 @@ nav img {
 ========================================= */
 
 .interest {
-    background: #101214;
+    background: #111214;
 
     color: white;
 
     text-align: center;
 
-    padding: 140px 30px;
+    padding: 145px 0;
 }
-
 
 .interest-content {
     max-width: 800px;
@@ -507,28 +427,25 @@ nav img {
     margin: 0 auto;
 }
 
-
 .interest h2 {
-    font-size: clamp(50px, 7vw, 90px);
+    font-size: clamp(55px, 7vw, 92px);
 
-    line-height: 0.95;
+    line-height: 0.94;
 
-    letter-spacing: -3px;
+    letter-spacing: -4px;
 
     margin-bottom: 35px;
 }
 
-
-.interest p:not(.eyebrow) {
+.interest-content > p:not(.eyebrow) {
     max-width: 600px;
 
     margin: 0 auto 40px;
 
+    color: #bdbdbd;
+
     font-size: 18px;
-
-    color: #bbbbbb;
 }
-
 
 
 /* =========================================
@@ -540,34 +457,30 @@ footer {
 
     color: white;
 
+    padding: 60px 0;
+
     text-align: center;
-
-    padding: 60px 30px;
 }
 
+.footer-content img {
+    width: 130px;
 
-footer img {
-    width: 120px;
-
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 }
 
-
-footer p {
-    font-size: 12px;
+.footer-content p {
+    font-size: 11px;
 
     letter-spacing: 1px;
 }
 
+.footer-content .copyright {
+    color: #666666;
 
-footer .copyright {
     margin-top: 10px;
 
-    color: #777777;
-
-    font-size: 11px;
+    font-size: 10px;
 }
-
 
 
 /* =========================================
@@ -576,100 +489,94 @@ footer .copyright {
 
 @media (max-width: 850px) {
 
+    .container {
+        width: calc(100% - 50px);
+    }
+
 
     /* NAVIGATION */
 
-    nav {
-        padding: 20px;
+    .site-nav {
+        width: calc(100% - 40px);
+
+        padding: 18px 0;
+
+        gap: 15px;
     }
 
-
-    nav img {
-        width: 120px;
+    .logo-link img {
+        width: 125px;
     }
-
 
     .nav-links {
         display: none;
     }
 
-
     .nav-button {
-        padding: 11px 14px;
+        padding: 11px 13px;
 
-        font-size: 10px;
+        font-size: 9px;
     }
-
 
 
     /* HERO */
 
-    .hero-simple {
-        min-height: 75vh;
+    .hero {
+        min-height: 80vh;
     }
 
-
-    .hero-simple-content {
-        padding: 140px 25px 80px;
+    .hero-content {
+        padding-top: 145px;
+        padding-bottom: 80px;
     }
 
-
-    .hero-simple h1 {
-        font-size: 60px;
+    .hero h1 {
+        font-size: 61px;
 
         letter-spacing: -3px;
-    }
 
+        margin-bottom: 30px;
+    }
 
     .hero-description {
         font-size: 17px;
     }
 
 
-
     /* SECTIONS */
 
     .section {
-        padding: 80px 25px;
+        padding: 85px 0;
     }
 
 
+    /* TWO COLUMN */
 
-    /* ABOUT */
-
-    .intro-content {
+    .two-column {
         grid-template-columns: 1fr;
 
         gap: 45px;
     }
 
 
-    .intro h2 {
-        font-size: 48px;
+    /* ABOUT */
+
+    h2 {
+        font-size: 49px;
+
+        letter-spacing: -2px;
     }
 
-
-    .large-text {
+    .text-content .lead {
         font-size: 21px;
     }
 
 
-
     /* PHILOSOPHY */
 
-    .dark {
-        padding-left: 25px;
-
-        padding-right: 25px;
-    }
-
-
     .philosophy h2 {
-        font-size: 48px;
-
         margin-bottom: 55px;
     }
-
 
     .philosophy-grid {
         grid-template-columns: 1fr;
@@ -677,26 +584,20 @@ footer .copyright {
         gap: 50px;
     }
 
-
     .number {
         margin-bottom: 25px;
     }
 
 
-
     /* TRAINING */
 
     .training h2 {
-        font-size: 48px;
-
         margin-bottom: 50px;
     }
-
 
     .cards {
         grid-template-columns: 1fr;
     }
-
 
     .card {
         min-height: auto;
@@ -704,44 +605,28 @@ footer .copyright {
         padding: 30px;
     }
 
-
     .card-number {
         margin-bottom: 45px;
     }
 
 
-
     /* LOCATION */
 
-    .location {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
+    .location .text-content {
+        padding-top: 0;
     }
-
-
-    .location h2 {
-        font-size: 48px;
-    }
-
-
-    .location-text p {
-        font-size: 18px;
-    }
-
 
 
     /* CTA */
 
     .interest {
-        padding: 100px 25px;
+        padding: 100px 0;
     }
 
-
     .interest h2 {
-        font-size: 55px;
+        font-size: 56px;
 
-        letter-spacing: -2px;
+        letter-spacing: -3px;
     }
 
 }
