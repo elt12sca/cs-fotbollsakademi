@@ -1,7 +1,6 @@
 /* =========================================
    RESET
 ========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -28,21 +27,17 @@ a {
     color: inherit;
 }
 
-
 /* =========================================
    GLOBAL CONTAINER
 ========================================= */
-
 .container {
     width: min(1180px, calc(100% - 80px));
     margin: 0 auto;
 }
 
-
 /* =========================================
    NAVIGATION
 ========================================= */
-
 header {
     position: absolute;
     top: 0;
@@ -52,15 +47,10 @@ header {
 }
 
 .site-nav {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
     padding: 24px 0;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 40px;
 }
 
@@ -74,47 +64,16 @@ header {
     height: auto;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-
-    margin-left: auto;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    letter-spacing: 0.8px;
-
-    transition: opacity 0.2s;
-}
-
-.nav-links a:hover {
-    opacity: 0.65;
-}
-
 .nav-button {
     display: inline-block;
-
     padding: 13px 19px;
-
     background: white;
     color: #111111;
-
     text-decoration: none;
-
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 1px;
-
     white-space: nowrap;
-
     transition: transform 0.2s;
 }
 
@@ -122,25 +81,19 @@ header {
     transform: translateY(-2px);
 }
 
-
 /* =========================================
    TYPOGRAPHY
 ========================================= */
-
 .eyebrow {
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 3px;
-
     text-transform: uppercase;
-
     margin-bottom: 28px;
+    color: #888888;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -150,17 +103,13 @@ h2 {
     letter-spacing: -3px;
 }
 
-
 /* =========================================
    HERO
 ========================================= */
-
 .hero {
-    min-height: 78vh;
-
+    min-height: 85vh;
     display: flex;
     align-items: center;
-
     background: #111214;
     color: white;
 }
@@ -172,461 +121,179 @@ h2 {
 
 .hero h1 {
     font-size: clamp(70px, 10vw, 125px);
-
     line-height: 0.86;
-
     letter-spacing: -6px;
-
     margin-bottom: 38px;
 }
 
 .hero-description {
     max-width: 620px;
-
     font-size: 20px;
     line-height: 1.5;
-
     color: #d7d7d7;
-
     margin-bottom: 40px;
 }
-
 
 /* =========================================
    BUTTON
 ========================================= */
-
 .button {
     display: inline-block;
-
-    padding: 16px 27px;
-
+    padding: 18px 32px;
     background: #ffffff;
     color: #111111;
-
     text-decoration: none;
-
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 1px;
-
     transition: all 0.2s ease;
 }
 
 .button:hover {
     transform: translateY(-3px);
+    background: #f1f1ef;
 }
 
-
 /* =========================================
-   SECTIONS
+   SECTIONS & CARDS
 ========================================= */
-
 .section {
     padding: 130px 0;
 }
 
-
-/* =========================================
-   TWO COLUMN
-========================================= */
-
-.two-column {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: start;
-}
-
-
-/* =========================================
-   ABOUT
-========================================= */
-
-.about {
-    background: #ffffff;
-}
-
-.about h2 {
-    max-width: 560px;
-}
-
-.text-content {
-    max-width: 560px;
-}
-
-.text-content .lead {
-    font-size: 25px;
-    line-height: 1.45;
-
-    margin-bottom: 30px;
-}
-
-.text-content p:not(.lead) {
-    font-size: 17px;
-
-    color: #555555;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   PHILOSOPHY
-========================================= */
-
 .philosophy {
-    background: #111214;
-    color: white;
+    background: #ffffff;
+    color: #111111;
 }
 
 .philosophy h2 {
     margin-bottom: 85px;
 }
 
-.philosophy-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 30px;
-}
-
-.philosophy-item {
-    border-top: 1px solid #444444;
-
-    padding-top: 25px;
-}
-
-.number {
-    display: block;
-
-    color: #888888;
-
-    font-size: 12px;
-
-    margin-bottom: 55px;
-}
-
-.philosophy-item h3 {
-    font-size: 22px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 20px;
-}
-
-.philosophy-item p {
-    max-width: 340px;
-
-    color: #bdbdbd;
-
-    font-size: 16px;
-}
-
-
-/* =========================================
-   TRAINING
-========================================= */
-
-.training {
-    background: #ffffff;
-}
-
-.training h2 {
-    margin-bottom: 70px;
-}
-
 .cards {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
+    gap: 30px;
 }
 
 .card {
     min-height: 310px;
+    padding: 40px;
+    background: #f5f5f3;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
 
-    padding: 35px;
-
-    background: #f1f1ef;
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card-number {
     display: block;
-
     color: #777777;
-
     font-size: 12px;
-
-    margin-bottom: 70px;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .card h3 {
     font-size: 25px;
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
 }
 
 .card p {
     color: #555555;
-
     font-size: 16px;
 }
-
-
-/* =========================================
-   LOCATION
-========================================= */
-
-.location {
-    background: #f5f5f3;
-}
-
-.location h2 {
-    max-width: 560px;
-}
-
-.location .text-content {
-    padding-top: 45px;
-}
-
-.location .text-content p {
-    font-size: 19px;
-
-    color: #444444;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   INTEREST / CTA
-========================================= */
-
-.interest {
-    background: #111214;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 145px 0;
-}
-
-.interest-content {
-    max-width: 800px;
-
-    margin: 0 auto;
-}
-
-.interest h2 {
-    font-size: clamp(55px, 7vw, 92px);
-
-    line-height: 0.94;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 35px;
-}
-
-.interest-content > p:not(.eyebrow) {
-    max-width: 600px;
-
-    margin: 0 auto 40px;
-
-    color: #bdbdbd;
-
-    font-size: 18px;
-}
-
 
 /* =========================================
    FOOTER
 ========================================= */
-
 footer {
     background: #08090a;
-
     color: white;
-
-    padding: 60px 0;
-
+    padding: 80px 0;
     text-align: center;
 }
 
 .footer-content img {
     width: 130px;
-
     margin: 0 auto 25px;
+    opacity: 0.8;
 }
 
 .footer-content p {
     font-size: 11px;
-
     letter-spacing: 1px;
 }
 
 .footer-content .copyright {
     color: #666666;
-
     margin-top: 10px;
-
     font-size: 10px;
 }
-
 
 /* =========================================
    MOBILE
 ========================================= */
-
 @media (max-width: 850px) {
-
     .container {
         width: calc(100% - 50px);
     }
 
-
     /* NAVIGATION */
-
     .site-nav {
-        width: calc(100% - 40px);
-
         padding: 18px 0;
-
-        gap: 15px;
     }
-
     .logo-link img {
         width: 125px;
     }
-
-    .nav-links {
-        display: none;
-    }
-
     .nav-button {
         padding: 11px 13px;
-
         font-size: 9px;
     }
 
-
     /* HERO */
-
     .hero {
         min-height: 80vh;
     }
-
     .hero-content {
         padding-top: 145px;
         padding-bottom: 80px;
     }
-
     .hero h1 {
         font-size: 61px;
-
         letter-spacing: -3px;
-
         margin-bottom: 30px;
     }
-
     .hero-description {
         font-size: 17px;
     }
 
-
     /* SECTIONS */
-
     .section {
         padding: 85px 0;
     }
-
-
-    /* TWO COLUMN */
-
-    .two-column {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-
-    /* ABOUT */
-
     h2 {
         font-size: 49px;
-
         letter-spacing: -2px;
     }
 
-    .text-content .lead {
-        font-size: 21px;
-    }
-
-
-    /* PHILOSOPHY */
-
+    /* CARDS */
     .philosophy h2 {
         margin-bottom: 55px;
     }
-
-    .philosophy-grid {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-    .number {
-        margin-bottom: 25px;
-    }
-
-
-    /* TRAINING */
-
-    .training h2 {
-        margin-bottom: 50px;
-    }
-
     .cards {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-
     .card {
         min-height: auto;
-
         padding: 30px;
     }
-
     .card-number {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
     }
-
-
-    /* LOCATION */
-
-    .location .text-content {
-        padding-top: 0;
-    }
-
-
-    /* CTA */
-
-    .interest {
-        padding: 100px 0;
-    }
-
-    .interest h2 {
-        font-size: 56px;
-
-        letter-spacing: -3px;
-    }
-
 }
