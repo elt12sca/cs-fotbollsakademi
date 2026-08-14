@@ -275,6 +275,153 @@ footer {
 .philosophy-content p:last-child {
     margin-bottom: 0;
 }
+
+/* =========================================
+   HEADER NAV LÄNKAR
+========================================= */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+/* =========================================
+   GRUNDARNA - SIDA (Hero)
+========================================= */
+.page-hero {
+    padding: 180px 0 100px 0; /* Ger plats åt headern */
+}
+
+.page-hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   GRUNDARNA - PROFILER
+========================================= */
+.bg-white {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.profile-section {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dark-section.profile-section {
+    border-bottom: none; /* Ta bort kanten på svarta sektioner */
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Vänster kolumn för cirkel, höger för text */
+    gap: 80px;
+    align-items: start;
+}
+
+/* Cirkeln med initialer */
+.profile-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.dark-section .profile-circle {
+    border-color: #ffffff;
+}
+
+.profile-name {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.profile-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+/* Brödtext för profilerna */
+.profile-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: inherit;
+    font-weight: 400;
+}
+
+.profile-content p:last-child {
+    margin-bottom: 0;
+}
+
+.bg-white .profile-content p {
+    color: #444444; /* Mörkgrått för läsbarhet på vitt */
+}
+
+.dark-section .profile-content p {
+    color: #cccccc; /* Ljusgrått för läsbarhet på svart */
+}
+
+/* =========================================
+   CTA Sektion & Knappar
+========================================= */
+.dark-btn {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.dark-btn:hover {
+    background-color: #333333;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #111111;
+}
+
 /* =========================================
    MOBILE RESPONSIVENESS
 ========================================= */
