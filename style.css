@@ -62,13 +62,13 @@ img {
     gap: 12px;
     text-decoration: none;
     color: white;
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 800;
+    font-size: 16px;
     letter-spacing: 2px;
 }
 
 .logo-link img {
-    height: 24px;
+    height: 28px;
     width: auto;
 }
 
@@ -554,15 +554,15 @@ footer {
     }
 
     .logo-link {
-        font-size: 10px;
-        letter-spacing: 1px;
+        font-size: 13px;
+        letter-spacing: 1.5px;
         text-align: center;
         justify-content: center;
         max-width: 100%;
     }
 
     .logo-link img {
-        height: 20px;
+        height: 22px;
     }
 
     .header-nav {
