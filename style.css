@@ -243,32 +243,33 @@ footer {
     font-weight: normal;
 }
 /* =========================================
-   VÅR FILOSOFI (TEXT SECTION)
+   VÅR FILOSOFI (DARK SECTION)
 ========================================= */
-.philosophy-text {
-    padding-top: 0; /* Tar bort lite avstånd eftersom Vårt Upplägg redan har padding under sig */
+.dark-section {
+    background-color: #0a0a0a; /* Svart bakgrund som matchar Hero */
+    color: #ffffff;
 }
 
 .philosophy-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Delar skärmen i två lika stora kolumner */
-    gap: 60px;
+    grid-template-columns: 1fr 1fr; /* Delar skärmen exakt på mitten */
+    gap: 80px;
     align-items: start;
-    border-top: 1px solid #eeeeee; /* En supertunn, elegant linje som skiljer sektionerna åt */
-    padding-top: 100px;
 }
 
 .philosophy-title h2 {
-    font-size: clamp(36px, 4.5vw, 52px); /* Lite mindre än huvudrubriken men fortfarande kraftfull */
-    line-height: 1;
+    font-size: clamp(45px, 5.5vw, 75px); /* Enorm text som skalar ner snyggt */
+    line-height: 0.9; /* Mycket tajt radavstånd */
     letter-spacing: -2px;
+    text-transform: uppercase;
 }
 
 .philosophy-content p {
     font-size: 18px;
-    color: #555555; /* En mörkgrå färg som är väldigt vilsam att läsa */
-    margin-bottom: 24px;
-    line-height: 1.7;
+    color: #c4c4c4; /* Ljusgrå text för att inte skrika i ögonen mot den svarta bakgrunden */
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .philosophy-content p:last-child {
