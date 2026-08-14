@@ -12,11 +12,11 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía moderna sin serifas */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #ffffff;
     color: #111111;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased; /* Hace que el texto se vea más nítido */
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -36,7 +36,7 @@ img {
    HEADER
 ========================================= */
 .site-header {
-    background-color: #111111; /* Color de fondo oscuro como en la foto */
+    background-color: #111111;
     position: relative;
     z-index: 100;
     padding: 20px 0;
@@ -60,8 +60,31 @@ img {
 }
 
 .logo-link img {
-    height: 24px; /* Ajusta este valor dependiendo del tamaño de tu logo */
+    height: 24px;
     width: auto;
+}
+
+/* =========================================
+   HEADER NAV LÄNKAR
+========================================= */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto; /* Tvingar hela gruppen längst till höger */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
 }
 
 /* =========================================
@@ -81,7 +104,7 @@ img {
     background-color: #ffffff;
     color: #000000;
     padding: 14px 28px;
-    border-radius: 50px; /* Esto crea el efecto de píldora */
+    border-radius: 50px;
     text-transform: uppercase;
 }
 
@@ -102,15 +125,15 @@ img {
 }
 
 .hero-eyebrow {
-    color: #a0a0a0; /* Gris clarito para contraste en fondo oscuro */
+    color: #a0a0a0;
 }
 
 .dark-eyebrow {
-    color: #666666; /* Gris más oscuro para el fondo blanco */
+    color: #666666;
 }
 
 h1, h2, h3 {
-    font-weight: 800; /* Texto muy grueso */
+    font-weight: 800;
 }
 
 /* =========================================
@@ -119,8 +142,8 @@ h1, h2, h3 {
 .hero {
     min-height: 85vh;
     display: flex;
-    align-items: flex-end; /* Alinea el contenido hacia abajo como en la foto */
-    padding-bottom: 120px; /* Da un respiro por debajo del botón */
+    align-items: flex-end;
+    padding-bottom: 120px;
     background-color: #0a0a0a;
     background-position: center;
     background-size: cover;
@@ -135,19 +158,18 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Un pequeño degradado negro para asegurar que el texto blanco siempre se lea */
     background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Mantiene el texto por encima de la foto y el overlay */
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: clamp(60px, 8vw, 130px);
-    line-height: 0.9; /* Hace que las dos líneas estén muy pegadas */
+    line-height: 0.9;
     letter-spacing: -3px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -163,10 +185,10 @@ h1, h2, h3 {
 }
 
 .hero-btn {
-    padding: 20px 48px !important; /* Botón mucho más alto y ancho */
-    font-size: 14px !important; /* Texto del botón más grande */
-    font-weight: 800 !important; /* Letra extra gruesa */
-    letter-spacing: 2px !important; /* Letras más separadas */
+    padding: 20px 48px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
 }
 
 /* =========================================
@@ -221,52 +243,30 @@ h1, h2, h3 {
 }
 
 /* =========================================
-   FOOTER
-========================================= */
-footer {
-    background: #111111;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.footer-content p {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.footer-content .copyright {
-    color: #666666;
-    margin-top: 15px;
-    font-size: 11px;
-    font-weight: normal;
-}
-/* =========================================
    VÅR FILOSOFI (DARK SECTION)
 ========================================= */
 .dark-section {
-    background-color: #0a0a0a; /* Svart bakgrund som matchar Hero */
+    background-color: #0a0a0a;
     color: #ffffff;
 }
 
 .philosophy-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Delar skärmen exakt på mitten */
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
 }
 
 .philosophy-title h2 {
-    font-size: clamp(45px, 5.5vw, 75px); /* Enorm text som skalar ner snyggt */
-    line-height: 0.9; /* Mycket tajt radavstånd */
+    font-size: clamp(45px, 5.5vw, 75px);
+    line-height: 0.9;
     letter-spacing: -2px;
     text-transform: uppercase;
 }
 
 .philosophy-content p {
     font-size: 18px;
-    color: #c4c4c4; /* Ljusgrå text för att inte skrika i ögonen mot den svarta bakgrunden */
+    color: #c4c4c4;
     margin-bottom: 30px;
     line-height: 1.6;
     font-weight: 400;
@@ -277,32 +277,10 @@ footer {
 }
 
 /* =========================================
-   HEADER NAV LÄNKAR
-========================================= */
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: opacity 0.2s ease;
-}
-
-.nav-link:hover {
-    opacity: 0.7;
-}
-
-/* =========================================
    GRUNDARNA - SIDA (Hero)
 ========================================= */
 .page-hero {
-    padding: 180px 0 100px 0; /* Ger plats åt headern */
+    padding: 80px 0 100px 0;
 }
 
 .page-hero h1 {
@@ -325,17 +303,16 @@ footer {
 }
 
 .dark-section.profile-section {
-    border-bottom: none; /* Ta bort kanten på svarta sektioner */
+    border-bottom: none;
 }
 
 .profile-container {
     display: grid;
-    grid-template-columns: 250px 1fr; /* Vänster kolumn för cirkel, höger för text */
+    grid-template-columns: 250px 1fr;
     gap: 80px;
     align-items: start;
 }
 
-/* Cirkeln med initialer */
 .profile-sidebar {
     display: flex;
     flex-direction: column;
@@ -374,7 +351,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* Brödtext för profilerna */
 .profile-content p {
     font-size: 16px;
     line-height: 1.8;
@@ -388,11 +364,11 @@ footer {
 }
 
 .bg-white .profile-content p {
-    color: #444444; /* Mörkgrått för läsbarhet på vitt */
+    color: #444444;
 }
 
 .dark-section .profile-content p {
-    color: #cccccc; /* Ljusgrått för läsbarhet på svart */
+    color: #cccccc;
 }
 
 /* =========================================
@@ -423,21 +399,47 @@ footer {
 }
 
 /* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: #111111;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer-content .copyright {
+    color: #666666;
+    margin-top: 15px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+/* =========================================
    MOBILE RESPONSIVENESS
 ========================================= */
 @media (max-width: 850px) {
     .header-container {
-        flex-direction: column;
-        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-   /* Lägg till detta inuti din befintliga @media-regel */
-    .philosophy-container {
-        grid-template-columns: 1fr; /* Gör så att det blir en kolumn på mobilen */
-        gap: 30px;
-        padding-top: 60px;
+    .header-nav {
+        gap: 15px;
     }
-   
+
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
     .hero {
         padding-bottom: 60px;
         min-height: 75vh;
@@ -465,17 +467,12 @@ footer {
         margin-bottom: 50px;
     }
 
-   /* Mobilanpassning för Grundarna-sidan */
-    .header-nav {
-        gap: 15px; /* Mindre mellanrum i menyn på mobil */
-    }
-    
     .profile-container {
-        grid-template-columns: 1fr; /* Staplar cirkel och text över varandra */
+        grid-template-columns: 1fr;
         gap: 40px;
     }
     
     .page-hero {
-        padding: 140px 0 60px 0;
+        padding: 40px 0 60px 0;
     }
 }
