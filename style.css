@@ -282,7 +282,14 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-    
+
+   /* Lägg till detta inuti din befintliga @media-regel */
+    .philosophy-container {
+        grid-template-columns: 1fr; /* Gör så att det blir en kolumn på mobilen */
+        gap: 30px;
+        padding-top: 60px;
+    }
+   
     .hero {
         padding-bottom: 60px;
         min-height: 75vh;
