@@ -464,4 +464,18 @@ footer {
         font-size: 40px;
         margin-bottom: 50px;
     }
+
+   /* Mobilanpassning för Grundarna-sidan */
+    .header-nav {
+        gap: 15px; /* Mindre mellanrum i menyn på mobil */
+    }
+    
+    .profile-container {
+        grid-template-columns: 1fr; /* Staplar cirkel och text över varandra */
+        gap: 40px;
+    }
+    
+    .page-hero {
+        padding: 140px 0 60px 0;
+    }
 }
