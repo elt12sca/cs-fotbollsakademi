@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+/* Previene cualquier desplazamiento horizontal en toda la web */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -521,57 +529,135 @@ footer {
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS
+   MOBILE RESPONSIVENESS (DEFINITIVO)
 ========================================= */
 @media (max-width: 850px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 30px);
+        max-width: 100%;
+    }
+
+    /* HEADER */
+    .site-header {
+        padding: 15px 0;
+    }
+
     .header-container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column; /* Pone el logo arriba y los enlaces abajo */
         align-items: center;
+        gap: 12px;
+    }
+
+    .logo-link {
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .logo-link img {
+        height: 20px;
     }
 
     .header-nav {
-        gap: 15px;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
     }
 
-    .philosophy-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .nav-link {
+        font-size: 10px;
+        letter-spacing: 1px;
     }
-    
+
+    /* BOTÓN DENTRO DEL HEADER EN MÓVIL */
+    .header-nav .pill-btn {
+        padding: 8px 16px !important;
+        font-size: 10px !important;
+        letter-spacing: 1px !important;
+        white-space: nowrap;
+    }
+
+    /* TÍTULOS PRINCIPALES (Evita que palabras largas como MÄNNISKORNA desborden) */
+    .hero h1,
+    .page-hero h1 {
+        font-size: clamp(28px, 7vw, 42px) !important;
+        letter-spacing: -1px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* HERO & SECCIONES */
     .hero {
-        padding-bottom: 60px;
-        min-height: 75vh;
+        padding-bottom: 50px;
+        min-height: auto;
     }
 
     .hero-content {
-        padding-top: 60px;
-    }
-
-    .hero h1 {
-        font-size: 55px;
-        letter-spacing: -2px;
+        padding-top: 30px;
     }
 
     .hero-description {
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: 30px;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .upplagg h2 {
-        font-size: 40px;
-        margin-bottom: 50px;
+    .hero-btn {
+        padding: 14px 28px !important;
+        font-size: 12px !important;
+        width: 100%;
+        text-align: center;
     }
 
+    /* ESTRUCTURA Y TARJETAS */
+    .cards,
+    .philosophy-container,
     .profile-container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
     }
-    
+
+    .upplagg h2,
+    .philosophy-title h2 {
+        font-size: clamp(28px, 6vw, 40px);
+        margin-bottom: 30px;
+    }
+
     .page-hero {
-        padding: 40px 0 60px 0;
+        padding: 30px 0 40px 0;
+    }
+
+    /* TARJETAS DE CONTACTO */
+    .contact-card {
+        padding: 25px 20px;
+    }
+
+    .contact-card-header {
+        gap: 15px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 12px;
+    }
+
+    .contact-label {
+        width: auto;
+    }
+
+    .general-email {
+        font-size: clamp(18px, 5vw, 24px);
+        word-break: break-all;
     }
 }
