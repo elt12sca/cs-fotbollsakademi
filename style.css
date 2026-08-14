@@ -242,7 +242,38 @@ footer {
     font-size: 11px;
     font-weight: normal;
 }
+/* =========================================
+   VÅR FILOSOFI (TEXT SECTION)
+========================================= */
+.philosophy-text {
+    padding-top: 0; /* Tar bort lite avstånd eftersom Vårt Upplägg redan har padding under sig */
+}
 
+.philosophy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Delar skärmen i två lika stora kolumner */
+    gap: 60px;
+    align-items: start;
+    border-top: 1px solid #eeeeee; /* En supertunn, elegant linje som skiljer sektionerna åt */
+    padding-top: 100px;
+}
+
+.philosophy-title h2 {
+    font-size: clamp(36px, 4.5vw, 52px); /* Lite mindre än huvudrubriken men fortfarande kraftfull */
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.philosophy-content p {
+    font-size: 18px;
+    color: #555555; /* En mörkgrå färg som är väldigt vilsam att läsa */
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.philosophy-content p:last-child {
+    margin-bottom: 0;
+}
 /* =========================================
    MOBILE RESPONSIVENESS
 ========================================= */
