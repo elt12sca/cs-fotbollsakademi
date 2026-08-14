@@ -154,12 +154,19 @@ h1, h2, h3 {
 }
 
 .hero-description {
-    max-width: 650px;
-    font-size: 18px;
+    max-width: 700px;
+    font-size: 20px;
     line-height: 1.6;
-    color: #e0e0e0;
-    margin-bottom: 40px;
+    color: #ffffff;
+    margin-bottom: 50px;
     font-weight: 400;
+}
+
+.hero-btn {
+    padding: 20px 48px !important; /* Botón mucho más alto y ancho */
+    font-size: 14px !important; /* Texto del botón más grande */
+    font-weight: 800 !important; /* Letra extra gruesa */
+    letter-spacing: 2px !important; /* Letras más separadas */
 }
 
 /* =========================================
